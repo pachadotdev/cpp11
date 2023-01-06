@@ -24,7 +24,7 @@ Then decorate C++ functions you want to expose to R with `[[cpp11::register]]`.
 
 cpp11 is a header only library with no hard dependencies and does not use a shared library, so it is straightforward and reliable to use in packages without fear of compile-time and run-time mismatches.
 
-Alternatively, you can [vendor](https://cpp11.r-lib.org/articles/motivations.html#vendoring) the current installed version of cpp11 headers into your package with `cpp11::vendor_cpp11()`.
+Alternatively, you can [vendor](https://cpp11.r-lib.org/articles/motivations.html#vendoring) the current installed version of cpp11 headers into your package with `cpp11::cpp_vendor()`.
 This ensures the headers will remain unchanged until you explicitly update them.
 
 ## Getting started
