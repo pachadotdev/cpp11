@@ -415,7 +415,7 @@ In the go community the concept of [vendoring](https://go.googlesource.com/propo
 Vendoring means that you copy the code for the dependencies into your project's source tree.
 This ensures the dependency code is fixed and stable until it is updated.
 Because cpp11 is fully [header only](#header-only) you can vendor the code in the same way.
-`cpp11::vendor_cpp11()` is provided to do this if you choose.
+`cpp11::cpp_vendor()` is provided to do this if you choose.
 
 Vendoring has advantages and drawbacks however.
 The advantage is that changes to the cpp11 project could never break your existing code.
