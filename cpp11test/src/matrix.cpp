@@ -119,6 +119,22 @@ using namespace Rcpp;
   return result;
 }
 
+[[cpp11::register]]
+cpp11::writable::doubles row_sums_4(cpp11::dsp_matrix<> x) {
+  int nrow = x.nrow();
+  cpp11::writable::doubles result(nrow);
+
+  for (int i = 0; i < nrow; ++i) {
+    double sum = 0;
+    for (int j = 0; j < nrow; ++j) {
+      sum += x.get(i, j);
+    }
+    result[i] = sum;
+  }
+
+  return result;
+}
+
 [[cpp11::register]] cpp11::doubles col_sums(cpp11::doubles_matrix<cpp11::by_column> x) {
   cpp11::writable::doubles sums(x.ncol());
 
@@ -135,5 +151,5 @@ using namespace Rcpp;
     ++i;
   }
 
-  return sums;
+  return sums; // a
 }
