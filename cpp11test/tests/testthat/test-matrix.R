@@ -22,6 +22,9 @@ test_that("row_sums gives same result as rowSums", {
 
   z5 <- new("dspMatrix", Dim = c(2L, 2L), x = c(1, 2, 1), uplo = "U")
   expect_equal(rowSums(z3), row_sums_4(z5))
+
+  z6 <- new("dspMatrix", Dim = c(2L, 2L), x = c(1, 2, 1), uplo = "L")
+  expect_equal(row_sums_4(z5), row_sums_4(z6))
 })
 
 test_that("col_sums gives same result as colSums", {

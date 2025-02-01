@@ -119,15 +119,14 @@ using namespace Rcpp;
   return result;
 }
 
-[[cpp11::register]]
-cpp11::writable::doubles row_sums_4(cpp11::dsp_matrix<> x) {
+[[cpp11::register]] cpp11::writable::doubles row_sums_4(cpp11::dsp_matrix<> x) {
   int nrow = x.nrow();
   cpp11::writable::doubles result(nrow);
 
   for (int i = 0; i < nrow; ++i) {
     double sum = 0;
     for (int j = 0; j < nrow; ++j) {
-      sum += x.get(i, j);
+      sum += x(i, j);
     }
     result[i] = sum;
   }
