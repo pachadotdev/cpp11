@@ -22,3 +22,4 @@
 #include "cpp11/raws.hpp"
 #include "cpp11/sexp.hpp"
 #include "cpp11/strings.hpp"
+#include "cpp11/streams.hpp"

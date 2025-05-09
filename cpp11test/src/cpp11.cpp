@@ -310,6 +310,54 @@ extern "C" SEXP _cpp11test_cpp11_safe_(SEXP x_sxp) {
     return cpp11::as_sexp(cpp11_safe_(cpp11::as_cpp<cpp11::decay_t<SEXP>>(x_sxp)));
   END_CPP11
 }
+// streams.cpp
+void streams_cout();
+extern "C" SEXP _cpp11test_streams_cout() {
+  BEGIN_CPP11
+    streams_cout();
+    return R_NilValue;
+  END_CPP11
+}
+// streams.cpp
+void streams_warn();
+extern "C" SEXP _cpp11test_streams_warn() {
+  BEGIN_CPP11
+    streams_warn();
+    return R_NilValue;
+  END_CPP11
+}
+// streams.cpp
+void streams_cerr();
+extern "C" SEXP _cpp11test_streams_cerr() {
+  BEGIN_CPP11
+    streams_cerr();
+    return R_NilValue;
+  END_CPP11
+}
+// streams.cpp
+void streams_cout2();
+extern "C" SEXP _cpp11test_streams_cout2() {
+  BEGIN_CPP11
+    streams_cout2();
+    return R_NilValue;
+  END_CPP11
+}
+// streams.cpp
+void streams_warn2();
+extern "C" SEXP _cpp11test_streams_warn2() {
+  BEGIN_CPP11
+    streams_warn2();
+    return R_NilValue;
+  END_CPP11
+}
+// streams.cpp
+void streams_cerr2();
+extern "C" SEXP _cpp11test_streams_cerr2() {
+  BEGIN_CPP11
+    streams_cerr2();
+    return R_NilValue;
+  END_CPP11
+}
 // strings.cpp
 cpp11::writable::strings string_proxy_assignment_();
 extern "C" SEXP _cpp11test_string_proxy_assignment_() {
@@ -518,6 +566,12 @@ static const R_CallMethodDef CallEntries[] = {
     {"_cpp11test_rcpp_sum_int_for_",        (DL_FUNC) &_cpp11test_rcpp_sum_int_for_,        1},
     {"_cpp11test_remove_altrep",            (DL_FUNC) &_cpp11test_remove_altrep,            1},
     {"_cpp11test_row_sums",                 (DL_FUNC) &_cpp11test_row_sums,                 1},
+    {"_cpp11test_streams_cerr",             (DL_FUNC) &_cpp11test_streams_cerr,             0},
+    {"_cpp11test_streams_cerr2",            (DL_FUNC) &_cpp11test_streams_cerr2,            0},
+    {"_cpp11test_streams_cout",             (DL_FUNC) &_cpp11test_streams_cout,             0},
+    {"_cpp11test_streams_cout2",            (DL_FUNC) &_cpp11test_streams_cout2,            0},
+    {"_cpp11test_streams_warn",             (DL_FUNC) &_cpp11test_streams_warn,             0},
+    {"_cpp11test_streams_warn2",            (DL_FUNC) &_cpp11test_streams_warn2,            0},
     {"_cpp11test_string_proxy_assignment_", (DL_FUNC) &_cpp11test_string_proxy_assignment_, 0},
     {"_cpp11test_string_push_back_",        (DL_FUNC) &_cpp11test_string_push_back_,        0},
     {"_cpp11test_sum_dbl_accumulate2_",     (DL_FUNC) &_cpp11test_sum_dbl_accumulate2_,     1},

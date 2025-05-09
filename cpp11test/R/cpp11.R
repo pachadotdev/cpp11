@@ -160,6 +160,30 @@ cpp11_safe_ <- function(x_sxp) {
   .Call(`_cpp11test_cpp11_safe_`, x_sxp)
 }
 
+streams_cout <- function() {
+  invisible(.Call(`_cpp11test_streams_cout`))
+}
+
+streams_warn <- function() {
+  invisible(.Call(`_cpp11test_streams_warn`))
+}
+
+streams_cerr <- function() {
+  invisible(.Call(`_cpp11test_streams_cerr`))
+}
+
+streams_cout2 <- function() {
+  invisible(.Call(`_cpp11test_streams_cout2`))
+}
+
+streams_warn2 <- function() {
+  invisible(.Call(`_cpp11test_streams_warn2`))
+}
+
+streams_cerr2 <- function() {
+  invisible(.Call(`_cpp11test_streams_cerr2`))
+}
+
 string_proxy_assignment_ <- function() {
   .Call(`_cpp11test_string_proxy_assignment_`)
 }
