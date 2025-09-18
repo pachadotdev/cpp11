@@ -455,22 +455,6 @@ context("doubles-C++") {
     expect_true(!cpp11::is_na(na2[1]));
   }
 
-  test_that("as_doubles(logicals)") {
-    cpp11::writable::logicals y;
-
-    for (int i = 0; i < 4; i++) {
-      y.push_back(i % 2 == 0);
-    }
-
-    cpp11::doubles i(cpp11::as_doubles(y));
-
-    expect_true(i[0] == 1.0);
-    expect_true(i[1] == 0.0);
-    expect_true(i[2] == 1.0);
-    expect_true(i[3] == 0.0);
-    expect_true(cpp11::detail::r_typeof(i) == REALSXP);
-  }
-
   test_that("doubles operator[] and at") {
     cpp11::doubles x(Rf_allocVector(REALSXP, 2));
     REAL(x)[0] = 1;

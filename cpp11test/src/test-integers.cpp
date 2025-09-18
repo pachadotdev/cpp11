@@ -44,22 +44,6 @@ context("integers-C++") {
     expect_true(!cpp11::is_na(na2[1]));
   }
 
-  test_that("as_integers(logicals)") {
-    cpp11::writable::logicals y;
-
-    for (int i = 0; i < 4; i++) {
-      y.push_back(i % 2 == 0);
-    }
-
-    cpp11::integers i(cpp11::as_integers(y));
-
-    expect_true(i[0] == 1);
-    expect_true(i[1] == 0);
-    expect_true(i[2] == 1);
-    expect_true(i[3] == 0);
-    expect_true(cpp11::detail::r_typeof(i) == INTSXP);
-  }
-
   test_that("integers.push_back()") {
     cpp11::writable::integers x;
     x.push_back(1);

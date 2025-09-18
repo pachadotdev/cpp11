@@ -603,6 +603,8 @@ static const R_CallMethodDef CallEntries[] = {
     {"_cpp11test_my_warning_n1",            (DL_FUNC) &_cpp11test_my_warning_n1,            1},
     {"_cpp11test_my_warning_n1fmt",         (DL_FUNC) &_cpp11test_my_warning_n1fmt,         1},
     {"_cpp11test_my_warning_n2fmt",         (DL_FUNC) &_cpp11test_my_warning_n2fmt,         2},
+    {"_cpp11test_notroxcpp1_",              (DL_FUNC) &_cpp11test_notroxcpp1_,              1},
+    {"_cpp11test_notroxcpp6_",              (DL_FUNC) &_cpp11test_notroxcpp6_,              1},
     {"_cpp11test_nullable_extptr_1",        (DL_FUNC) &_cpp11test_nullable_extptr_1,        0},
     {"_cpp11test_nullable_extptr_2",        (DL_FUNC) &_cpp11test_nullable_extptr_2,        0},
     {"_cpp11test_protect_many_",            (DL_FUNC) &_cpp11test_protect_many_,            1},
